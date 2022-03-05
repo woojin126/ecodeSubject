@@ -45,7 +45,7 @@ public class ProductRepository {
         query +=  "FROM `promotion_products` pp ";
         query += ", `promotion` p ";
         query += "WHERE p.id = pp.promotion_id ";
-        query += "AND pp.product_id = :productId "; // 해당 상품이 프로모션을 가지고있는지
+        query += "AND pp.product_id = :productId "; // 해당 상품이 프로모션을 가지고있는지 검증
         query += "AND p.use_started_at <= :now "; //쿠폰 사용 가능한 기간인지 확인
         query += "AND p.use_ended_at >= :now "; //쿠폰 사용 가능한 기간인지 확인
         if (couponIds.length > 0) { // 쿠폰이 있는지 없는지 확인
