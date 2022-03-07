@@ -39,6 +39,7 @@ public class ProductRepository {
         );
     }
 
+    //면접 질문 : 왜 db쿼리를 사용해서 쿠폰날짜를 구했는지. 다른방법은 없었나?
     public List<Promotion> getProductAmountAndUseCoupon(int productId, int[] couponIds) {
         String query = "";
         query += "SELECT p.id , p.promotion_type , p.name, p.discount_type, p.discount_value, p.use_started_at, p.use_ended_at ";

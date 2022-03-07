@@ -34,6 +34,7 @@ public class ProductService {
     }
 
     // 할인가격 계산
+    // 면접 질문: 여기서 if else를 사용하지않고 할인가격을 계산할 방법이 있을거같은데? 뭔지?
     private Double getDisCountRate(List<Promotion> discountPromotions, int originPrice) {
         Double discount = 0.0;
         for (Promotion promotion : discountPromotions) {
